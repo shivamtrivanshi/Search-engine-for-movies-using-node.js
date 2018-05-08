@@ -7,7 +7,7 @@ var app = express();
 //load key in app
 var key = require("./config/key");
 
-//MIDDLEWARE
+
 app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
