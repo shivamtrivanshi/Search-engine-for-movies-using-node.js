@@ -1,0 +1,56 @@
+body{
+    background: url("../img/body-image.jpg");
+    background-attachment: fixed;
+    background-origin: initial;
+    background-clip: initial;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    position: relative;
+}
+
+#card-size{
+    height: 380px;
+}
+
+table.highlight>tbody>tr:hover {
+    background-color: rgba(15, 175, 255,0.5);
+}
+
+.show-card{
+    background-color: rgb(15, 175, 255);
+    color: white;
+}
+
+
+.btn{
+    background-color: rgb(15, 175, 255);
+}
+
+
+.btn:hover{
+    background-color: steelblue;
+}
+
+.btn:active{
+    background-color: steelblue;
+}
+
+.section{
+    background-color: slategray;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+
+input[type=text]:not(.browser-default):focus:not([readonly]){
+    border-bottom: 1px solid rgb(15, 175, 255);
+    -webkit-box-shadow: 0 1px 0 0 rgb(15, 175, 255);
+    box-shadow: 0 1px 0 0 rgb(15, 175, 255);
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly])+label{
+    color: rgb(15, 175, 255);
+}
+

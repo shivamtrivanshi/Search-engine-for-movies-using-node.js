@@ -1,0 +1,42 @@
+<% include ./layouts/header %>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel">
+                <form action="/result" method="GET">
+                    <div class="input-field">
+                        <input type="text" name="search" id="text" required>
+                        <label for="text">Search movie</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <% if(data.Search && data.Search.length > 0){ %>
+        <% data.Search.forEach(function(movie){ %>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator responsive-img" id="card-size" src="<%= movie.Poster %>">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4 truncate"><%= movie.Title %></span>
+                        <p><a href="/result/<%= movie.imdbID %>" class="btn">More</a></p>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+        <% }else{ %>
+            <% if(data.Error){ %>
+            <div class="col s12">
+                <div class="section">
+                    <h3><%= data.Error %></h3>
+                </div>
+            </div>
+            <% } %>
+        <% } %>
+    </div>
+</div>
+<% include ./layouts/footer %>

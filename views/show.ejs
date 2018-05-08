@@ -1,0 +1,79 @@
+<% include ./layouts/header %>
+<div class="container">
+    <div class="row">
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="<%= data.Poster %>">
+                </div>
+                <div class="card-content">
+                    <span class="card-title"><%= data.Title %></span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <a href="/" class="btn">Back</a>
+                    <a href="https://www.imdb.com/title/<%= data.imdbID %>" target="_blank" class="btn">IMDB</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m8">
+            <div class="card show-card">
+                <div class="card-content">
+                    <span class="card-title">Movies Details</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <table class="highlight striped">
+                        <tbody>
+                            <tr>
+                                <th>Title</th>
+                                <td><%= data.Title %></td>
+                            </tr>
+                            <tr>
+                                <th>Year</th>
+                                <td><%= data.Year %></td>
+                            </tr>
+                            <tr>
+                                <th>Genre</th>
+                                <td><%= data.Genre %></td>
+                            </tr>
+                            <tr>
+                                <th>Director</th>
+                                <td><%= data.Director %></td>
+                            </tr>
+                            <tr>
+                                <th>Writer</th>
+                                <td><%= data.Writer %></td>
+                            </tr>
+                            <tr>
+                                <th>Actors</th>
+                                <td><%= data.Actors %></td>
+                            </tr>
+                            <tr>
+                                <th>Awards</th>
+                                <td><%= data.Awards %></td>
+                            </tr>
+                            <tr>
+                                <th>imdbRating</th>
+                                <td><%= data.imdbRating %></td>
+                            </tr>
+                            <tr>
+                                <th>BoxOffice</th>
+                                <td><%= data.BoxOffice %></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Plot</span>    
+                    <p><%= data.Plot %></p>
+                </div>
+            </div>
+        </div>      
+    </div>
+</div>
+<% include ./layouts/footer %>
