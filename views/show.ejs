@@ -10,7 +10,7 @@
                     <span class="card-title"><%= data.Title %></span>
                 </div>
             </div>
-            <div class="card">
+            <div class="card hide-on-small-only">
                 <div class="card-content">
                     <a href="/" class="btn">Back</a>
                     <a href="https://www.imdb.com/title/<%= data.imdbID %>" target="_blank" class="btn">IMDB</a>
@@ -71,6 +71,12 @@
                 <div class="card-content">
                     <span class="card-title">Plot</span>    
                     <p><%= data.Plot %></p>
+                </div>
+            </div>
+            <div class="card hide-on-med-and-up">
+                <div class="card-content">
+                    <a href="/" class="btn">Back</a>
+                    <a href="https://www.imdb.com/title/<%= data.imdbID %>" target="_blank" class="btn">IMDB</a>
                 </div>
             </div>
         </div>      
